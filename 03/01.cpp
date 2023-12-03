@@ -1,8 +1,14 @@
 #include "../aoc.h"
 
 AOC aoc;
-
+bool DEBUG = false;
 vector<string> lines;
+
+void debug (string line) {
+   if (DEBUG) {
+      cout << line << endl;
+   }
+}
 
 bool is_symbol (char c) {
    if (!isdigit(c) && c != '.') {
@@ -71,8 +77,9 @@ bool adjacent (int lineNum, int started, int ended) {
 }
 
 int32_t evaluate (string num, int started, int ended, int lineNum) {
+   debug("EVAL   " + num);
    if (adjacent(lineNum, started, ended)) {
-      //cout << num << endl;
+      debug("* PART #" + num);
       return stoi(num);
    } else {
       //cout << num << endl;
@@ -99,7 +106,8 @@ int32_t parseLine (string s, int lineNum) {
          ended = -1;
       }
    }
-   if (started != -1 && ended != -1 && s.length() > 0) {
+   if (started != -1) {
+      ended = s.length() - 1;
       output += evaluate(part, started, ended, lineNum);
    }
    return output;

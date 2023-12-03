@@ -2,7 +2,7 @@
 
 function validateNumber () {
 	if [ $1 -eq $2 ]; then
-		echo "Test passed $1 != $2"
+		echo "Test passed $1 == $2"
 	else
 		echo "Test failed $1 != $2"
 	fi
@@ -11,7 +11,7 @@ function validateNumber () {
 
 function validateString () {
 	if [[ "$1" -eq "$2" ]]; then
-		echo "Test passed \"$1\" != \"$2\""
+		echo "Test passed \"$1\" == \"$2\""
 	else
 		echo "Test failed \"$1\" != \"$2\""
 	fi

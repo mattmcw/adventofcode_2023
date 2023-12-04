@@ -17,7 +17,7 @@ ANSWER=0
 if [[ "${1}" != "" ]]; then
 	ANSWER=${1}
 fi
-cat example${WHICH}.txt | ./${WHICH}
+
 TEST=$(cat example${WHICH}.txt | ./${WHICH})
 echo "${TEST}"
 VAL=$(echo "${TEST}" | grep "ANSWER" | awk '{print $2}')

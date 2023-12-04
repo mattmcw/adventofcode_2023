@@ -8,7 +8,6 @@ vector<string> toList (string input) {
    vector<string> list = aoc.split(input, aoc.SPACE);
    vector<string> l;
    for (string s : list) {
-
       if (aoc.trim(s) != "" || (s.length() == 1 && s != " ")) {
          l.push_back(s);
       }
@@ -51,16 +50,18 @@ int main() {
    vector<int64_t> copies(lines.size(), 1);
 
    for (string line : lines) {
-      cout << aoc.trim(line) << endl;
+      //cout << aoc.trim(line) << endl;
       parts = aoc.split(line, '|');
       
       score = scoreCard(aoc.trim(parts[0]), aoc.trim(parts[1]));
-      for (int c = 1; c < copies[x]; c++) {
+      //cout << x << " = " << score << endl;
+      for (int c = 0; c < copies[x]; c++) {
          for (int i = 1; i < score + 1; i++) {
+            //cout << to_string(x + i) << " ++" << endl;
             copies[x + i] += 1;
          }
       }
-      cout << copies[x] << endl;
+      //cout << copies[x] << endl;
       x++;
    }
    for (int score : copies) {

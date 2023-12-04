@@ -3,7 +3,7 @@
 set -e
 
 function run () {
-	cat inputtest.txt | ./01
+	cat input.txt | ./01
 }
 
 time run

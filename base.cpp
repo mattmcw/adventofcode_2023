@@ -10,5 +10,5 @@ int main() {
    while( getline( cin, s ) ) {
       //s
    }
-   cout << answer << endl;
+   cout << "ANSWER " << answer << endl;
 }

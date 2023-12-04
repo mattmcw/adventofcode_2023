@@ -38,8 +38,9 @@ int32_t getNumberOnLine (string line, int i) {
          started = true;
       }
    }
-   cout << "NUMSTR " << numStr << endl;
+
    if (numStr.length() > 0) {
+      cout << "NUMSTR " << numStr << endl;
       val = stoi(numStr);
    }
    return val;
@@ -77,8 +78,8 @@ vector<int32_t> adjacent (int lineNum, int i) {
       if (num > -1 && nums.size() < 2) {
          nums.push_back(num);
       }
-      if (num == 1 && startChar + 1 < line.length() && isdigit(line[startChar + 1])) {
-         num = getNumberOnLine(line, startChar + 2);
+      if (nums.size() == 1 && i + 1 < line.length() && isdigit(line[i + 1]) && i > 0 && !isdigit(line[i]) && isdigit(line[i - 1])) {
+         num = getNumberOnLine(line, i + 1);
          if (num > -1) {
             nums.push_back(num);
          }
@@ -93,9 +94,10 @@ int32_t evaluate (int lineNum, int i) {
    if (nums.size() == 2) {
       debug(to_string(nums[0]));
       debug(to_string(nums[1]));
-      debug("_____");
+      
       output = nums[0] * nums[1];
    }
+   debug("_____");
    return output;
 }
 

@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <vector>
 #include <sstream>
+#include <algorithm>
 using namespace std;
 
 class AOC {
@@ -22,10 +23,10 @@ class AOC {
 			return parts;
 		}
 
-		std::string trim(const std::string& line) {
+		string trim(string line) {
 			const char* WhiteSpace = " \t\v\r\n";
-			std::size_t start = line.find_first_not_of(WhiteSpace);
-			std::size_t end = line.find_last_not_of(WhiteSpace);
-			return start == end ? std::string() : line.substr(start, end - start + 1);
+			size_t start = line.find_first_not_of(WhiteSpace);
+			size_t end = line.find_last_not_of(WhiteSpace);
+			return start == end ? string() : line.substr(start, end - start + 1);
 		}
 };

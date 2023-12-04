@@ -15,19 +15,12 @@ vector<string> toList (string input) {
    return l;
 }
 
-bool inList (vector<string> v, string x) {
-   if (find(v.begin(), v.end(), x) != v.end()) {
-      return true;
-   }
-   return false;
-}
-
 int32_t scoreCard (string winning, string have) {
    int32_t score = 0;
    vector<string> winners = toList(winning);
    vector<string> h = toList(have);
    for (string c : h) {
-      if (inList(winners, c)) {
+      if (aoc.vectorContains(winners, c)) {
          score++;
       }
    }

@@ -29,4 +29,10 @@ class AOC {
 			size_t end = line.find_last_not_of(WhiteSpace);
 			return start == end ? string() : line.substr(start, end - start + 1);
 		}
+
+		template <class T, class I>
+		bool vectorContains(const vector<T>& v, I& t) {
+			bool found = (std::find(v.begin(), v.end(), t) != v.end());
+			return found;
+		}
 };

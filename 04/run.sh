@@ -9,7 +9,7 @@ if [[ "${1}" != "" ]]; then
 fi
 
 function run () {
-	cat inputtest.txt | ./${WHICH}
+	cat input.txt | ./${WHICH}
 }
 
 time run

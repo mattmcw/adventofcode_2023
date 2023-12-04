@@ -17,8 +17,8 @@ ANSWER=0
 if [[ "${1}" != "" ]]; then
 	ANSWER=${1}
 fi
-
-TEST=$(cat example01.txt | ./01)
+cat example${WHICH}.txt | ./${WHICH}
+TEST=$(cat example${WHICH}.txt | ./${WHICH})
 echo "${TEST}"
 VAL=$(echo "${TEST}" | grep "ANSWER" | awk '{print $2}')
 validateNumber $VAL $ANSWER

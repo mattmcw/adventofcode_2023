@@ -1,8 +1,6 @@
-#include <iostream>
-#include <string>
-#include <ctype.h>
-#include <vector>
-using namespace std;
+#include "../aoc.h"
+
+AOC aoc;
 
 int main() {
    string s;

@@ -43,18 +43,14 @@ int main() {
    vector<int64_t> copies(lines.size(), 1);
 
    for (string line : lines) {
-      //cout << aoc.trim(line) << endl;
       parts = aoc.split(line, '|');
       
       score = scoreCard(aoc.trim(parts[0]), aoc.trim(parts[1]));
-      //cout << x << " = " << score << endl;
       for (int c = 0; c < copies[x]; c++) {
          for (int i = 1; i < score + 1; i++) {
-            //cout << to_string(x + i) << " ++" << endl;
             copies[x + i] += 1;
          }
       }
-      //cout << copies[x] << endl;
       x++;
    }
    for (int score : copies) {

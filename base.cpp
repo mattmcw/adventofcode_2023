@@ -4,7 +4,7 @@ AOC aoc;
 
 int main() {
    string s;
-   int answer;
+   int answer = 0;
    while( getline( cin, s ) ) {
       //s
    }

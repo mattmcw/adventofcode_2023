@@ -35,4 +35,32 @@ class AOC {
 			bool found = (std::find(v.begin(), v.end(), t) != v.end());
 			return found;
 		}
+
+		int getVecPosString(vector<string> vec, string element) {
+		    int i;
+		    for (i = 0; i < vec.size(); i++){
+		        if (vec[i] == element){
+		            break;
+		        }
+		    }
+		    if (i == vec.size()){
+		        i = -1;
+		    }
+		        
+		    return i;
+		}
+
+		int getVecPosInt(vector<int64_t> vec, int64_t element) {
+		    int i;
+		    for (i = 0; i < vec.size(); i++){
+		        if (vec[i] == element){
+		            break;
+		        }
+		    }
+		    if (i == vec.size()){
+		        i = -1;
+		    }
+		        
+		    return i;
+		}
 };

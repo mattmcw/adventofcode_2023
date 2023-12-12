@@ -8,6 +8,7 @@
 #include <cstdint>
 #include <cstring>
 #include <utility>
+#include <cmath>
 using namespace std;
 
 class AOC {

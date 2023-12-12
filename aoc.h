@@ -1,9 +1,13 @@
+#include <cstdlib>
 #include <iostream>
 #include <string>
 #include <ctype.h>
 #include <vector>
 #include <sstream>
 #include <algorithm>
+#include <cstdint>
+#include <cstring>
+#include <utility>
 using namespace std;
 
 class AOC {
